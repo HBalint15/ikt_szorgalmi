@@ -35,7 +35,7 @@
     <div class="kviz">
         <h1>4. Kérdés</h1>
         <p>Hány napból áll egy szökőév?</p>
-        <input id="q4" type="text" name="" id="">
+        <input id="q4" type="text">
     </div>
     <div class="kviz">
         <h1>5. Kérdés</h1>
@@ -241,6 +241,7 @@
             }
             console.log(pont)
             var pont_ki_element = document.getElementById("pont_ki")
+            pont_ki_element.style.visibility = "visible"
             pont_ki_element.innerHTML = pont + " pontot értél el"
         }
         var q1ans

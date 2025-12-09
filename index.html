@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>Holik Bálint</title>
+    <title>Holik Bálint|IKT Szorgalmi</title>
     <meta name="description" content="Általános műveltségi kvíz">
     <meta name="keywords" content="kviz, általános műveltség, műveltség">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -124,11 +124,11 @@
         <p>Mi az Amerikai Egyesült Államok fővárosa?</p>
         <input id="q20" type="text">
     </div>
-    <h3 id="pont_ki"></h3>
+    <h3 id="pont_ki">pont</h3>
     <button onclick="finished()">
-        <p>Beküldés</p>
+        Beküldés
     </button>
-    
+
     <script>
         var pont = 0
         var q3ans
@@ -228,7 +228,7 @@
                 console.log("17")
             }
             if (q18ans == "Ázsia" || q18ans == "azsia" || q18ans == "ázsia") {
-                pont +=1;
+                pont += 1;
                 console.log("18")
             }
             if (q19ans == "Csendes-óceán" || q19ans == "csendes-óceán") {
@@ -244,70 +244,66 @@
             pont_ki_element.style.visibility = "visible"
             pont_ki_element.innerHTML = pont + " pontot értél el"
         }
-        var q1ans
+        var q1ans;
         function q1answer1() {
-            q1ans = 1
+            q1ans = 1;
         }
         function q1answer2() {
-            q1ans = 2
+            q1ans = 2;
         }
         function q1answer3() {
-            q1ans = 3
+            q1ans = 3;
         }
-        var q2ans
+        var q2ans;
         function q2answer1() {
-            q2ans = 1
+            q2ans = 1;
         }
         function q2answer2() {
-            q2ans = 2
+            q2ans = 2;
         }
         function q2answer3() {
-            q2ans = 3
+            q2ans = 3;
         }
-        var q8ans
+        var q8ans;
         function q8answeri() {
-            q8ans = true
+            q8ans = true;
         }
         function q8answerh() {
-            q8ans = false
+            q8ans = false;
         }
-        var q9ans
+        var q9ans;
         function q9answeri() {
-            q9ans = true
-            /* console.log("q9answeri ok") */
+            q9ans = true;
         }
         function q9answerh() {
-            q9ans = false
-            /* console.log("q9answerh ok") */
+            q9ans = false;
         }
-        var q10ans
+        var q10ans;
         function q10answeri() {
-            q10ans = true
-            /* console.log("q10answeri ok") */
+            q10ans = true;
         }
         function q10answerh() {
-            q10ans = false
-            /* console.log("q10anwserh ok") */
+            q10ans = false;
         }
-        var q11ans
+        var q11ans;
         function q11answer1() {
-            q11ans = 1
+            q11ans = 1;
         }
         function q11answer2() {
-            q11ans = 2
+            q11ans = 2;
         }
         function q11answer3() {
-            q11ans = 3
+            q11ans = 3;
         }
-        var q16ans
+        var q16ans;
         function q16answer1() {
-            q16ans = 1
+            q16ans = 1;
         }
         function q16answer2() {
-            q16ans = 2
+            q16ans = 2;
         }
         function q16answer3() {
-            q16ans = 3
+            q16ans = 3;
         }
 
     </script>

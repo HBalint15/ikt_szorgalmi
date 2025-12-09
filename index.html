@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Holik Bálint</title>
+    <meta name="description" content="Általános műveltségi kvíz">
+    <meta name="keywords" content="kviz, általános műveltség, műveltség">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+    <h1>Kvíz</h1>
+    <h2>Általános műveltség</h2>
+    <p id="desc"></p>
+    <div class="kviz">
+        <h1>1. Kérdés</h1>
+        <p>Melyik a Naprendszer legnagyobb bolygója?</p>
+        <input onclick="q1answer1()" type="button" value="Jupiter">
+        <input onclick="q1answer2()" type="button" value="Föld">
+        <input onclick="q1answer3()" type="button" value="Szaturnusz">
+    </div>
+    <div class="kviz">
+        <h1>2. Kérdés</h1>
+        <p>Ki festette a Mona Lisát?</p>
+        <input onclick="q2answer1()" type="button" value="Picasso">
+        <input onclick="q2answer2()" type="button" value="van Gogh">
+        <input onclick="q2answer3()" type="button" value="Leonardo da Vinci">
+    </div>
+    <div class="kviz">
+        <h1>3. Kérdés</h1>
+        <p>Hány fokos a derékszög?</p>
+        <input id="q3" type="text">
+    </div>
+    <div class="kviz">
+        <h1>4. Kérdés</h1>
+        <p>Hány napból áll egy szökőév?</p>
+        <input id="q4" type="text" name="" id="">
+    </div>
+    <div class="kviz">
+        <h1>5. Kérdés</h1>
+        <p>Melyik a Naphoz legközelebbi bolygó a Naprendszerben?</p>
+        <input id="q5" type="text">
+    </div>
+    <div class="kviz">
+        <h1>6. Kérdés</h1>
+        <p>Mi Olaszország fővárosa?</p>
+        <input id="q6" type="text">
+    </div>
+    <div class="kviz">
+        <h1>7. Kérdés</h1>
+        <p>Mi Japán hivatalos pénzneme?</p>
+        <input id="q7" type="text">
+    </div>
+    <div class="kviz">
+        <h1>8. Kérdés</h1>
+        <p>A gepárd a leggyorsabb szárazföldi állat.</p>
+        <input onclick="q8answeri()" type="button" value="Igaz">
+        <input onclick="q8answerh()" type="button" value="Hamis">
+    </div>
+    <div class="kviz">
+        <h1>9. Kérdés</h1>
+        <p>A Föld legnagyobb óceánja az Atlanti-óceán.</p>
+        <input onclick="q9answeri()" type="button" value="Igaz">
+        <input onclick="q9answerh()" type="button" value="Hamis">
+    </div>
+    <div class="kviz">
+        <h1>10. Kérdés</h1>
+        <p>A tengerek fagyáspontja átlagosan -2°C.</p>
+        <input onclick="q10answeri()" type="button" value="Igaz">
+        <input onclick="q10answerh()" type="button" value="Hamis">
+    </div>
+    <div class="kviz">
+        <h1>11. Kérdés</h1>
+        <p>Melyik országban van a Big Ben?</p>
+        <input onclick="q11answer1()" type="button" value="Anglia">
+        <input onclick="q11answer2()" type="button" value="Franciaország">
+        <input onclick="q11answer3()" type="button" value="Egyesült Államok">
+    </div>
+    <div class="kviz">
+        <h1>12. Kérdés</h1>
+        <p>Ki festette a Guernicát?</p>
+        <input id="q12" type="text">
+    </div>
+    <div class="kviz">
+        <h1>13. Kérdés</h1>
+        <p>Melyik ország fővárosa Tokió?</p>
+        <input id="q13" type="text">
+    </div>
+    <div class="kviz">
+        <h1>14. Kérdés</h1>
+        <p>Melyik ország fővárosa Madrid?</p>
+        <input id="q14" type="text">
+    </div>
+    <div class="kviz">
+        <h1>15. Kérdés</h1>
+        <p>Melyik évben szállt le az első ember a Holdra?</p>
+        <input id="q15" type="text">
+    </div>
+    <div class="kviz">
+        <h1>16. Kérdés</h1>
+        <p>Mi a legnagyobb szárazföldi állat?</p>
+        <input onclick="q16answer1()" type="button" value="Zsiráf">
+        <input onclick="q16answer2()" type="button" value="Elefánt">
+        <input onclick="q16answer3()" type="button" value="Aligátor">
+    </div>
+    <div class="kviz">
+        <h1>17. Kérdés</h1>
+        <p>Melyik ország ad otthont a Suzuka versenypályának?</p>
+        <input id="q17" type="text">
+    </div>
+    <div class="kviz">
+        <h1>18. Kérdés</h1>
+        <p>Mi a Föld legnagyobb kontinense?</p>
+        <input id="q18" type="text">
+    </div>
+    <div class="kviz">
+        <h1>19. Kérdés</h1>
+        <p>Melyik a Föld legnagyobb óceánja?</p>
+        <input id="q19" type="text">
+    </div>
+    <div class="kviz">
+        <h1>20. Kérdés</h1>
+        <p>Mi az Amerikai Egyesült Államok fővárosa?</p>
+        <input id="q20" type="text">
+    </div>
+    <h3 id="pont_ki"></h3>
+    <button onclick="finished()">
+        <p>Beküldés</p>
+    </button>
+    
+    <script>
+        var pont = 0
+        var q3ans
+        var q4ans
+        var q5ans
+        var q6ans
+        var q7ans
+        var q12ans
+        var q13ans
+        var q14ans
+        var q15ans
+        var q17ans
+        var q18ans
+        var q19ans
+        var q20ans
+        function finished() {
+            pont = 0;
+            q3ans = document.getElementById("q3").value;
+            q4ans = document.getElementById("q4").value;
+            q5ans = document.getElementById("q5").value;
+            q6ans = document.getElementById("q6").value;
+            q7ans = document.getElementById("q7").value;
+            q12ans = document.getElementById("q12").value;
+            q13ans = document.getElementById("q13").value;
+            q14ans = document.getElementById("q14").value;
+            q15ans = document.getElementById("q15").value;
+            q17ans = document.getElementById("q17").value;
+            q18ans = document.getElementById("q18").value;
+            q19ans = document.getElementById("q19").value;
+            q20ans = document.getElementById("q20").value;
+            if (q1ans == 1) {
+                pont += 1;
+                console.log("1")
+            }
+            if (q2ans == 3) {
+                pont += 1;
+                console.log("2")
+            }
+            if (q3ans == "90" || q3ans == "90°") {
+                pont += 1;
+                console.log("3")
+            }
+            if (q4ans == 366) {
+                pont += 1;
+                console.log("4")
+            }
+            if (q5ans == "Merkúr" || q5ans == "merkúr") {
+                pont += 1;
+                console.log("5")
+            }
+            if (q6ans == "Róma" || q6ans == "róma") {
+                pont += 1;
+                console.log("6")
+            }
+            if (q7ans == "Jen" || q7ans == "jen") {
+                pont += 1;
+                console.log("7")
+            }
+            if (q8ans == true) {
+                pont += 1;
+                console.log("8")
+            }
+            if (q9ans == false) {
+                pont += 1;
+                console.log("9")
+            }
+            if (q10ans == true) {
+                pont += 1;
+                console.log("10")
+            }
+            if (q11ans == 1) {
+                pont += 1
+                console.log("11")
+            }
+            if (q12ans == "Picasso" || q12ans == "picasso" || q12ans == "picaso") {
+                pont += 1;
+                console.log("12")
+            }
+            if (q13ans == "Japán" || q13ans == "japán") {
+                pont += 1;
+                console.log("13")
+            }
+            if (q14ans == "Spanyolország" || q14ans == "spanyolország") {
+                pont += 1;
+                console.log("14")
+            }
+            if (q15ans == "1969") {
+                pont += 1;
+                console.log("15")
+            }
+            if (q16ans == 2) {
+                pont += 1;
+                console.log("16")
+            }
+            if (q17ans == "Japán" || q17ans == "japán") {
+                pont += 1;
+                console.log("17")
+            }
+            if (q18ans == "Ázsia" || q18ans == "azsia" || q18ans == "ázsia") {
+                pont +=1;
+                console.log("18")
+            }
+            if (q19ans == "Csendes-óceán" || q19ans == "csendes-óceán") {
+                pont += 1;
+                console.log("19")
+            }
+            if (q20ans == "Washington" || q20ans == "washington") {
+                pont += 1;
+                console.log("20")
+            }
+            console.log(pont)
+            var pont_ki_element = document.getElementById("pont_ki")
+            pont_ki_element.innerHTML = pont + " pontot értél el"
+        }
+        var q1ans
+        function q1answer1() {
+            q1ans = 1
+        }
+        function q1answer2() {
+            q1ans = 2
+        }
+        function q1answer3() {
+            q1ans = 3
+        }
+        var q2ans
+        function q2answer1() {
+            q2ans = 1
+        }
+        function q2answer2() {
+            q2ans = 2
+        }
+        function q2answer3() {
+            q2ans = 3
+        }
+        var q8ans
+        function q8answeri() {
+            q8ans = true
+        }
+        function q8answerh() {
+            q8ans = false
+        }
+        var q9ans
+        function q9answeri() {
+            q9ans = true
+            /* console.log("q9answeri ok") */
+        }
+        function q9answerh() {
+            q9ans = false
+            /* console.log("q9answerh ok") */
+        }
+        var q10ans
+        function q10answeri() {
+            q10ans = true
+            /* console.log("q10answeri ok") */
+        }
+        function q10answerh() {
+            q10ans = false
+            /* console.log("q10anwserh ok") */
+        }
+        var q11ans
+        function q11answer1() {
+            q11ans = 1
+        }
+        function q11answer2() {
+            q11ans = 2
+        }
+        function q11answer3() {
+            q11ans = 3
+        }
+        var q16ans
+        function q16answer1() {
+            q16ans = 1
+        }
+        function q16answer2() {
+            q16ans = 2
+        }
+        function q16answer3() {
+            q16ans = 3
+        }
+
+    </script>
+</body>
+
+</html>
